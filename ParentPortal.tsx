@@ -309,16 +309,6 @@ const ParentPortal: React.FC = () => {
                     Odemknout Administraci
                   </button>
                 </form>
-
-                <div className="border-t border-slate-700/40 pt-4 text-center">
-                  <button
-                    type="button"
-                    onClick={handleAdminBypass}
-                    className="text-xs text-emerald-400 hover:underline inline-flex items-center gap-1"
-                  >
-                    ⚡ Rychlý vstup pro lektory (DEMO)
-                  </button>
-                </div>
               </div>
             ) : (
               

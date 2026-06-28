@@ -87,9 +87,9 @@ export const INSTRUCTORS: Instructor[] = [
   },
   {
     id: 'klara',
-    name: 'Bc. Klára Novotná',
-    role: 'Lektorka tance a rytmiky',
-    bio: 'Absolventka pedagogické fakulty a milovnice moderního tance. Vede kurz pohybu pro dívky s důrazem na radost ze sebevyjádření, hudební cítění a správné protažení.',
+    name: 'Petr Caly',
+    role: 'Lektor tance a rytmiky',
+    bio: 'Absolvent pedagogické fakulty a milovník moderního tance. Vede kurz pohybu pro děti s důrazem na radost ze sebevyjádření, hudební cítění a správné protažení.',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop', // Friendly young woman instructor
     specialization: ['Dětský moderní tanec', 'Strečink & flexibilita', 'Hry s doprovodem hudby']
   }
