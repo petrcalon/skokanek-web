@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Facebook, Instagram, Youtube, Sparkles, UserCheck } from 'lucide-react';
+import { Menu, X, Sparkles, UserCheck } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -85,12 +85,6 @@ const Navbar: React.FC = () => {
 
           {/* Action Button & Socials (Desktop) */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="flex space-x-2 border-r border-slate-300/30 pr-4">
-              <a href="#" className={`text-slate-400 hover:text-sky-500 transition-colors ${scrolled ? 'hover:text-sky-400' : ''}`}><Facebook size={18} /></a>
-              <a href="#" className={`text-slate-400 hover:text-pink-500 transition-colors ${scrolled ? 'hover:text-pink-400' : ''}`}><Instagram size={18} /></a>
-              <a href="#" className={`text-slate-400 hover:text-red-500 transition-colors ${scrolled ? 'hover:text-red-400' : ''}`}><Youtube size={18} /></a>
-            </div>
-            
             <a 
               href="#prihlaska"
               onClick={(e) => handleNavClick(e, '#prihlaska')}
@@ -159,11 +153,6 @@ const Navbar: React.FC = () => {
                 >
                   Přihlásit se na lekci
                 </a>
-                <div className="flex space-x-6 pt-2">
-                  <a href="#" className="text-blue-600"><Facebook size={22} /></a>
-                  <a href="#" className="text-pink-600"><Instagram size={22} /></a>
-                  <a href="#" className="text-red-600"><Youtube size={22} /></a>
-                </div>
               </div>
             </div>
           </motion.div>

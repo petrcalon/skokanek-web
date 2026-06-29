@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, HelpCircle, ChevronDown, Sparkles } from 'lucide-react';
+import { Mail, Phone, MapPin, HelpCircle, ChevronDown, Sparkles } from 'lucide-react';
 import { FAQS } from '../constants';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -90,22 +90,7 @@ const Footer: React.FC = () => {
                 Radost z přirozeného pohybu rozhýbáváme u dětí již od roku 2010. Přidejte se do naší velké rodiny v Příboře a pomozte dětem objevovat zdravé návyky plné tvořivosti a her.
               </p>
               
-              {/* Social profiles */}
-              <div className="flex space-x-3.5 pt-2">
-                {[
-                  { icon: Facebook, href: '#', color: 'hover:bg-blue-600 hover:text-white' },
-                  { icon: Instagram, href: '#', color: 'hover:bg-pink-600 hover:text-white' },
-                  { icon: Youtube, href: '#', color: 'hover:bg-red-600 hover:text-white' }
-                ].map((s, idx) => (
-                  <a 
-                    key={idx}
-                    href={s.href} 
-                    className={`w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center transition-all border border-slate-800 hover:border-slate-700 text-slate-400 ${s.color}`}
-                  >
-                    <s.icon size={18} />
-                  </a>
-                ))}
-              </div>
+
             </div>
 
             {/* Column 2: Quick navigation */}
@@ -117,12 +102,6 @@ const Footer: React.FC = () => {
                 <li><a href="#lektori" className="hover:text-emerald-400 transition-colors">Náš lektorský tým</a></li>
                 <li><a href="#fotogalerie" className="hover:text-emerald-400 transition-colors">Momenty ze cvičení</a></li>
                 <li><a href="#prihlaska" className="hover:text-emerald-400 transition-colors">Přihlašovací formulář</a></li>
-                <li>
-                  <a href="#portal-rodicu" className="text-emerald-400 hover:text-emerald-300 transition-colors inline-flex items-center gap-1">
-                    Portál rodičů
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-                  </a>
-                </li>
               </ul>
             </div>
 

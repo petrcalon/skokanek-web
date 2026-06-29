@@ -17,7 +17,7 @@ const GALLERY_PHOTOS: PhotoItem[] = [
     tag: 'Zábava'
   },
   {
-    src: 'https://lh3.googleusercontent.com/d/1DT_Ftr3k4Atn_M9JzNRCpH2H_kHp1S3P',
+    src: 'https://lh3.googleusercontent.com/d/1Yzg1NKxc1eltLvV7YWlYNtRufHyROOGu',
     title: 'Motivační High-Five',
     desc: 'Trenéři s dětmi budují rodinné pouto založené na povzbuzení a vzájemném respektu.',
     tag: 'Spolupráce'
