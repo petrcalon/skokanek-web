@@ -5,8 +5,8 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Kurzy', href: '#skupiny' },
   { label: 'Náš tým', href: '#lektori' },
   { label: 'Momenty', href: '#fotogalerie' },
+  { label: 'Videa', href: '#videa' },
   { label: 'Přihláška', href: '#prihlaska' },
-  { label: 'Portál rodičů', href: '#portal-rodicu', badge: 'Novinka' },
 ];
 
 export const COURSES: Course[] = [
@@ -89,7 +89,7 @@ export const INSTRUCTORS: Instructor[] = [
     id: 'klara',
     name: 'Petr Caly',
     role: 'Lektor tance a rytmiky',
-    bio: 'Absolvent pedagogické fakulty a milovník moderního tance. Vede kurz pohybu pro děti s důrazem na radost ze sebevyjádření, hudební cítění a správné protažení.',
+    bio: 'Vystudoval Univerzitu Hradec Králové, kde získal titul v oboru dějepis a základy společenských věd (ZSV). Práce s dětmi ho nesmírně naplňuje a baví, přičemž klade důraz na přátelský a individuální přístup. Svým nadšením pro sport se snaží v dětech probudit celoživotní lásku k aktivnímu pohybu.',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop', // Friendly young woman instructor
     specialization: ['Dětský moderní tanec', 'Strečink & flexibilita', 'Hry s doprovodem hudby']
   }

@@ -5,8 +5,8 @@ import About from './components/About';
 import Courses from './components/Courses';
 import Instructors from './components/Instructors';
 import Gallery from './components/Gallery';
+import VideoSection from './components/VideoSection';
 import RegistrationForm from './components/RegistrationForm';
-import ParentPortal from './components/ParentPortal';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -19,8 +19,8 @@ const App: React.FC = () => {
         <Courses />
         <Instructors />
         <Gallery />
+        <VideoSection />
         <RegistrationForm />
-        <ParentPortal />
       </main>
       <Footer />
     </div>
