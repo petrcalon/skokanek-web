@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
                 <li><a href="#o-programu" className="hover:text-emerald-400 transition-colors">O programu & filozofii</a></li>
                 <li><a href="#skupiny" className="hover:text-emerald-400 transition-colors">Přehled kurzů</a></li>
                 <li><a href="#lektori" className="hover:text-emerald-400 transition-colors">Náš lektorský tým</a></li>
-                <li><a href="#fotogalerie" className="hover:text-emerald-400 transition-colors">Momenty ze cvičení</a></li>
+                <li><a href="#fotogalerie" className="hover:text-emerald-400 transition-colors">Fotogalerie ze cvičení</a></li>
                 <li><a href="#prihlaska" className="hover:text-emerald-400 transition-colors">Přihlašovací formulář</a></li>
               </ul>
             </div>
@@ -118,7 +118,7 @@ const Footer: React.FC = () => {
                 </li>
                 <li className="flex items-center">
                   <Phone className="mr-3 w-5 h-5 text-sky-400 shrink-0" />
-                  <a href="tel:+420123456789" className="hover:text-white transition-colors text-slate-300 font-mono font-bold">+420 123 456 789</a>
+                  <a href="tel:+420608416778" className="hover:text-white transition-colors text-slate-300 font-mono font-bold">+420 608 416 778</a>
                 </li>
                 <li className="flex items-center">
                   <Mail className="mr-3 w-5 h-5 text-orange-400 shrink-0" />

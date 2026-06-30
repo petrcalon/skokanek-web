@@ -1,7 +1,6 @@
 import React from 'react';
 import { COURSES } from '../constants';
-import { Baby, Rabbit, Trophy, Footprints, Calendar, MapPin, Users, Coins, CheckCircle2 } from 'lucide-react';
-import { useRegistrationsStore } from '../store';
+import { Baby, Rabbit, Trophy, Footprints, Calendar, MapPin, Coins, CheckCircle2 } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const IconMap: Record<string, React.FC<any>> = {
@@ -12,7 +11,6 @@ const IconMap: Record<string, React.FC<any>> = {
 };
 
 const Courses: React.FC = () => {
-  const { getCourseOccupancy } = useRegistrationsStore();
 
   const handleSelectCourse = (courseId: string) => {
     // Save selected course in sessionStorage to auto-populate the registration dropdown inside RegistrationForm
@@ -63,7 +61,7 @@ const Courses: React.FC = () => {
             Sportovní kurzy pro rok 2026/2027
           </motion.h2>
           <p className="mt-4 text-slate-500 max-w-xl mx-auto text-base">
-            Každá skupina má přesně vymezenou kapacitu, která zaručuje individuální přístup trenérů ke každému dítěti.
+            Kurzy probíhají ve dvou pololetích: <strong>říjen–únor</strong> a <strong>březen–červen</strong>. Každý kurz se skládá z 15 lekcí. Kapacita skupin je omezena pro individuální přístup.
           </p>
           <div className="w-24 h-1.5 bg-gradient-to-r from-sky-500 to-emerald-500 mx-auto mt-6 rounded-full"></div>
         </div>
@@ -72,9 +70,6 @@ const Courses: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {COURSES.map((course, idx) => {
             const IconComponent = IconMap[course.icon] || Baby;
-            const occupancy = getCourseOccupancy(course.id);
-            const isClosing = occupancy.left <= 3 && occupancy.left > 0;
-            const isFull = occupancy.left === 0;
 
             return (
               <motion.div 
@@ -130,6 +125,9 @@ const Courses: React.FC = () => {
                         <span className="font-bold text-slate-900">{course.price.toLocaleString('cs-CZ')} Kč</span>
                         <span className="text-slate-400 font-normal">/ pololetí</span>
                       </div>
+                      <div className="text-[10px] text-slate-500 leading-relaxed bg-slate-50/70 p-2.5 rounded-xl border border-slate-100 mt-2">
+                        Platba za kurz musí být uhrazena nejpozději den před zahájením kurzu na účet školy <strong className="text-slate-700">131313410/0300</strong>.
+                      </div>
                     </div>
 
                     {/* Bullet Benefits checklist */}
@@ -148,50 +146,18 @@ const Courses: React.FC = () => {
                 {/* Capacity Counter + Action Button at the bottom */}
                 <div className="p-6 pt-0 mt-auto">
                   
-                  {/* Dynamic Capacity Progress Bar */}
-                  <div className="mb-4">
-                    <div className="flex justify-between items-center text-xs mb-1.5 font-bold">
-                      <span className="text-slate-400">Obsazenost:</span>
-                      <span className={`text-[11px] font-black ${
-                        isFull 
-                          ? 'text-red-500' 
-                          : isClosing 
-                            ? 'text-orange-500' 
-                            : 'text-emerald-600'
-                      }`}>
-                        {isFull 
-                          ? 'Místa obsazena!' 
-                          : isClosing 
-                            ? `Poslední ${occupancy.left} místa!` 
-                            : `${occupancy.occupied} z ${occupancy.total} dětí`}
-                      </span>
-                    </div>
-                    {/* Visual Progress Bar */}
-                    <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                      <div 
-                        style={{ width: `${(occupancy.occupied / occupancy.total) * 100}%` }}
-                        className={`h-full transition-all duration-1000 rounded-full ${
-                          isFull 
-                            ? 'bg-red-500' 
-                            : isClosing 
-                              ? 'bg-orange-500 animate-pulse' 
-                              : course.color
-                        }`}
-                      />
-                    </div>
+                  {/* Course Capacity Display */}
+                  <div className="mb-6 flex items-center justify-between bg-slate-50 border border-slate-100 rounded-xl px-4 py-3">
+                    <span className="text-slate-500 text-xs font-semibold">Kapacita kurzu:</span>
+                    <span className="text-slate-900 text-sm font-black font-heading">{course.capacity} dětí</span>
                   </div>
 
                   {/* Enroll button */}
                   <button 
                     onClick={() => handleSelectCourse(course.id)}
-                    disabled={isFull}
-                    className={`block text-center w-full py-3 px-4 rounded-xl font-extrabold text-sm transition-all cursor-pointer ${
-                      isFull 
-                        ? 'bg-slate-100 text-slate-400 border border-slate-200 cursor-not-allowed' 
-                        : 'border-2 border-slate-200 text-slate-700 hover:border-sky-500 hover:bg-sky-50 hover:text-sky-600'
-                    }`}
+                    className="block text-center w-full py-3 px-4 rounded-xl font-extrabold text-sm transition-all cursor-pointer border-2 border-slate-200 text-slate-700 hover:border-sky-500 hover:bg-sky-50 hover:text-sky-600"
                   >
-                    {isFull ? 'Plně obsazeno' : 'Vybrat & Přihlásit'}
+                    Vybrat & Přihlásit
                   </button>
                 </div>
               </motion.div>

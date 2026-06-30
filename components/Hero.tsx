@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.6 }}
               className="text-lg sm:text-xl text-slate-100 mb-8 font-medium leading-relaxed drop-shadow-lg max-w-2xl border-l-4 border-sky-400 pl-4 py-1"
             >
-              Všestranná sportovní příprava zaměřená na přirozený pohyb, obratnost a upřímnou radost u dětí věku 4 až 11 let. Kurzy, ze kterých se vrací vysmáté, spokojené a plné zdravé sebedůvěry.
+              Všestranná sportovní příprava zaměřená na přirozený pohyb, obratnost a upřímnou radost u dětí ve věku od 4 do 15 let. Kurzy, ze kterých se vrací vysmáté, spokojené a plné zdravé sebedůvěry.
             </motion.p>
 
             {/* Action Buttons */}
@@ -130,7 +130,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Play className="w-5 h-5 text-amber-400 shrink-0" />
-                <span>Zkušební lekce zdarma</span>
+                <span>Sport? Ano, ale bez šílenství!</span>
               </div>
             </motion.div>
           </div>

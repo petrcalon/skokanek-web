@@ -62,20 +62,37 @@ const About: React.FC = () => {
           >
             {/* Elegant multi-colored blob under image */}
             <div className="absolute -inset-4 bg-gradient-to-tr from-emerald-500 to-sky-400 rounded-3xl opacity-25 blur-2xl transform rotate-2"></div>
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-white transform hover:rotate-1 transition-transform duration-500">
+            
+            {/* Overlapping secondary photo */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8, rotate: -6 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: -6 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, type: 'spring', stiffness: 60 }}
+              className="absolute -top-6 -right-6 w-32 h-32 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-4 border-white shadow-2xl z-20 hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer"
+            >
               <img 
-                src="https://lh3.googleusercontent.com/d/1H56F-t9g3J2QkdfgCtNQVMCTBstzbJXZ" 
-                alt="Děti se radují v pohybu se Skokánkem" 
-                className="w-full h-[400px] object-cover"
+                src="https://lh3.googleusercontent.com/d/14ns6s673Pgp3bVTUx6_7HBZm0Luv5E_S" 
+                alt="Doplňující záběry ze cvičení" 
+                className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute bottom-4 left-4 right-4 bg-slate-900/85 backdrop-blur-md p-4 rounded-2xl border border-white/10 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-orange-500 flex items-center justify-center shrink-0">
-                  <Award className="w-6 h-6 text-white" />
+            </motion.div>
+
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-white transform hover:rotate-1 transition-transform duration-500 z-10">
+              <img 
+                src="https://lh3.googleusercontent.com/d/1yIgE3uLk6h9RU_DC2yQEYjdE4wk74Tnb" 
+                alt="Děti se radují v pohybu se Skokánkem" 
+                className="w-full h-[400px] object-cover object-top"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-slate-900/85 backdrop-blur-md p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl border border-white/10 flex items-center gap-3">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-orange-500 flex items-center justify-center shrink-0">
+                  <Award className="w-4.5 h-4.5 sm:w-5.5 sm:h-5.5 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-heading font-bold text-white text-sm">Záruka všestranné kvality</h4>
-                  <p className="text-xs text-slate-300">Respektujeme fyziologii dětí pod dohledem fyzioterapeutů.</p>
+                  <h4 className="font-heading font-bold text-white text-xs sm:text-sm">Záruka všestranné kvality</h4>
+                  <p className="text-[10px] sm:text-xs text-slate-300">Respektujeme fyziologii dětí pod dohledem fyzioterapeutů.</p>
                 </div>
               </div>
             </div>
@@ -166,35 +183,48 @@ const About: React.FC = () => {
           >
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-orange-500/20 border border-orange-500/40 flex items-center justify-center">
-                  <ShieldAlert className="w-5 h-5 text-orange-400" />
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-heading font-extrabold text-white">Vlajkový slib Skokánka</h3>
-                  <span className="text-xs bg-orange-500/20 text-orange-400 font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Náš slib rodičům</span>
+                  <h3 className="text-2xl font-heading font-extrabold text-white">Rozvoj dovedností</h3>
+                  <span className="text-xs bg-emerald-500/20 text-emerald-400 font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Sociální & personální rozvoj</span>
                 </div>
               </div>
 
+              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                Sportovně pohybové kurzy mají značný vliv na rozvoj sociálních a personálních dovedností dětí. Vedou děti:
+              </p>
+
               <ul className="space-y-4 text-xs font-medium text-slate-300">
-                <li className="flex gap-3">
-                  <span className="text-emerald-400 font-bold shrink-0">✔ 1.</span>
-                  <div>
-                    <strong className="text-emerald-400 block font-bold text-sm">Každý se smí a dokáže zapojit</strong>
-                    Žádné zklamání z toho, že dítě neumí kotrmelec. Do naší rodiny bereme každého bez náročných talentovek.
+                <li className="flex gap-3 items-start">
+                  <span className="text-emerald-400 font-bold shrink-0">—</span>
+                  <div className="text-slate-200">
+                    ke kladnému postoji k pohybu, k péči o tělo a zdraví
                   </div>
                 </li>
-                <li className="flex gap-3">
-                  <span className="text-sky-400 font-bold shrink-0">✔ 2.</span>
-                  <div>
-                    <strong className="text-sky-400 block font-bold text-sm">Radost z pokroku převyšuje medaile</strong>
-                    Učíme samostatnosti a oslavujeme i drobné úspěchy dětí, jako je překonání ostychu před novou hrou.
+                <li className="flex gap-3 items-start">
+                  <span className="text-sky-400 font-bold shrink-0">—</span>
+                  <div className="text-slate-200">
+                    ke spolupráci s druhými, k důvěře k ostatním ve skupině
                   </div>
                 </li>
-                <li className="flex gap-3">
-                  <span className="text-orange-400 font-bold shrink-0">✔ 3.</span>
-                  <div>
-                    <strong className="text-orange-400 block font-bold text-sm">Padat a chybovat je normální</strong>
-                    Vytváříme prostředí plné humoru, kde neexistuje posmívání. Pády učíme zvládat s bezpečným úsměvem.
+                <li className="flex gap-3 items-start">
+                  <span className="text-amber-400 font-bold shrink-0">—</span>
+                  <div className="text-slate-200">
+                    k samostatnosti a také k umění si pohyb užít
+                  </div>
+                </li>
+                <li className="flex gap-3 items-start">
+                  <span className="text-rose-400 font-bold shrink-0">—</span>
+                  <div className="text-slate-200">
+                    ke komunikaci s vrstevníky
+                  </div>
+                </li>
+                <li className="flex gap-3 items-start">
+                  <span className="text-violet-400 font-bold shrink-0">—</span>
+                  <div className="text-slate-200">
+                    ke smyslu pro fair play
                   </div>
                 </li>
               </ul>

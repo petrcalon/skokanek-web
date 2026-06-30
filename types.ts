@@ -20,6 +20,12 @@ export interface Instructor {
   bio: string;
   image: string;
   specialization: string[];
+  bullets?: string[];
+  quote?: string;
+  youtubeLink?: {
+    label: string;
+    url: string;
+  };
 }
 
 export interface NavItem {

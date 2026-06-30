@@ -7,6 +7,7 @@ interface VideoItem {
   title: string;
   description: string;
   embedUrl: string;
+  tag?: string;
 }
 
 const VIDEOS: VideoItem[] = [
@@ -14,7 +15,7 @@ const VIDEOS: VideoItem[] = [
     id: 'video-1',
     title: 'Ukázka z tréninku – Všestranná obratnost',
     description: 'Nahlédněte do průběhu naší standardní lekce zaměřené na komplexní rozvoj pohybových dovedností.',
-    embedUrl: 'https://www.youtube.com/embed/aQ18cdV8M7w'
+    embedUrl: 'https://www.youtube.com/embed/aQ18cdV8M7w?list=PLJHuEqXE9mBjFiuYE50xg1IMgpZX3HB3K'
   },
   {
     id: 'video-2',
@@ -32,7 +33,8 @@ const VIDEOS: VideoItem[] = [
     id: 'video-4',
     title: 'Radost z pohybu a týmový duch',
     description: 'Pohyb pro nás není jen dril, ale hlavně prostor pro radost, nová přátelství a zdravé sebevědomí.',
-    embedUrl: 'https://www.youtube.com/embed/TyXRB1q8Bes'
+    embedUrl: 'https://www.youtube.com/embed/TyXRB1q8Bes',
+    tag: 'Pohybový kurz dívky'
   }
 ];
 
@@ -108,7 +110,7 @@ const VideoSection: React.FC = () => {
                 <div className="mt-4 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-slate-400">
                   <span className="flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
-                    Kurz Skokánek
+                    {video.tag || 'Kurz Skokánek'}
                   </span>
                   <a
                     href="https://www.youtube.com/playlist?list=PLJHuEqXE9mBjFiuYE50xg1IMgpZX3HB3K"

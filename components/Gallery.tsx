@@ -11,7 +11,7 @@ interface PhotoItem {
 
 const GALLERY_PHOTOS: PhotoItem[] = [
   {
-    src: 'https://lh3.googleusercontent.com/d/1v2lVCGzW9uO-q2vh9ttHinUQasgJaQOI',
+    src: 'https://lh3.googleusercontent.com/d/17RM9dG4fFKrbFjN_HdNiH0DtCMY3BpxN',
     title: 'Hraní na opičích drahách',
     desc: 'Děti rozvíjejí přirozený šplh, obratnost a stabilitu těla v bezpečně polstrované opičí dráze.',
     tag: 'Zábava'
@@ -29,16 +29,16 @@ const GALLERY_PHOTOS: PhotoItem[] = [
     tag: 'Gymnastika'
   },
   {
-    src: 'https://lh3.googleusercontent.com/d/1Jq_t7mD1eqQachZKIjG8U6KkdyMSS3sJ',
-    title: 'Dívčí taneční lekce',
-    desc: 'Ladné rytmické pohyby, moderní gymnastika a tance doprovázené dětskou hudbou.',
-    tag: 'Tanec & Estetika'
-  },
-  {
-    src: 'https://lh3.googleusercontent.com/d/1Dpfu4BKAsaXZvRAREBLwzyPhOxtW8hi6',
+    src: 'https://lh3.googleusercontent.com/d/1v4M6XiFXUgvdLVzHXVEV-HGo4IGrsofl',
     title: 'Atletické sprinty',
     desc: 'Rozvoj dynamického startu a zdravého odrazu během veselých překážkových her.',
     tag: 'Atletika'
+  },
+  {
+    src: 'https://lh3.googleusercontent.com/d/1Dpfu4BKAsaXZvRAREBLwzyPhOxtW8hi6',
+    title: 'Dívčí taneční lekce',
+    desc: 'Ladné rytmické pohyby, moderní gymnastika a tance doprovázené dětskou hudbou.',
+    tag: 'Tanec & Estetika'
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1v2lVCGzW9uO-q2vh9ttHinUQasgJaQOI',

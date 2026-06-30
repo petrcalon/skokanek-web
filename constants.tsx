@@ -4,7 +4,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'O programu', href: '#o-programu' },
   { label: 'Kurzy', href: '#skupiny' },
   { label: 'Náš tým', href: '#lektori' },
-  { label: 'Momenty', href: '#fotogalerie' },
+  { label: 'Fotogalerie', href: '#fotogalerie' },
   { label: 'Videa', href: '#videa' },
   { label: 'Přihláška', href: '#prihlaska' },
 ];
@@ -19,9 +19,9 @@ export const COURSES: Course[] = [
     color: 'bg-emerald-500',
     icon: 'Baby',
     capacity: 15,
-    price: 2450,
-    schedule: 'Každé úterý 15:30 – 16:30',
-    location: 'ZŠ Jičínská Příbor (Malá tělocvična)',
+    price: 2200,
+    schedule: 'Každé pondělí 16:00 – 17:00',
+    location: 'Masarykovo gymnázium Příbor (Malá tělocvična)',
     benefits: ['Rozvoj koordinace ruka-oko', 'Základy bezpečné gymnastiky a pádů', 'Hravé budování lásky ke sportu']
   },
   {
@@ -32,38 +32,38 @@ export const COURSES: Course[] = [
     description: 'Rozvoj dynamiky, rychlosti a rytmických dovedností. Ideální přechod z mateřské školy pro rozvoj vytrvalosti a týmové sounáležitosti prostřednictvím her.',
     color: 'bg-sky-500',
     icon: 'Rabbit',
-    capacity: 18,
-    price: 2600,
-    schedule: 'Každé pondělí 16:00 – 17:00',
-    location: 'ZŠ Jičínská Příbor (Velká tělocvična)',
+    capacity: 15,
+    price: 2200,
+    schedule: 'Každé úterý 16:00 – 17:00',
+    location: 'Masarykovo gymnázium Příbor (Malá tělocvična)',
     benefits: ['Zlepšení odrazové síly a obratnosti', 'Týmové hry a rychlé reakce', 'Základy atletické průpravy']
   },
   {
     id: 'sportaci',
     title: 'Sporťáci',
-    ageGroup: '8–11 let',
-    gender: 'Chlapci i děvčata',
+    ageGroup: '8–15 let',
+    gender: 'Pouze chlapci',
     description: 'Všestranná sportovní příprava se zaměřením na atletické základy, míčové hry a rozvoj fyzické síly, vytrvalosti a zdravé sebedůvěry dětí.',
     color: 'bg-amber-500',
     icon: 'Trophy',
-    capacity: 20,
-    price: 2800,
-    schedule: 'Každý čtvrtek 16:30 – 17:45',
-    location: 'Masarykovo gymnázium Příbor (Tělocvična)',
+    capacity: 15,
+    price: 2200,
+    schedule: 'Každé úterý 17:00 – 18:00',
+    location: 'Masarykovo gymnázium Příbor (Malá tělocvična)',
     benefits: ['Pokročilá obratnost a základy atletiky', 'Míčové sporty a herní taktika', 'Všestranné posilování vlastní vahou']
   },
   {
     id: 'divky',
     title: 'Pohyb pro dívky',
-    ageGroup: '6–10 let',
+    ageGroup: '6–12 let',
     gender: 'Pouze děvčata',
     description: 'Specializovaný kurz pro mladé slečny kombinující základy estetické gymnastiky, moderního tance, rytmiky a protahování v přátelském, nesoutěživém dívčím kolektivu.',
     color: 'bg-rose-500',
     icon: 'Footprints',
-    capacity: 16,
-    price: 2550,
-    schedule: 'Každou středu 15:45 – 16:45',
-    location: 'Masarykovo gymnázium Příbor (Zrcadlový sál)',
+    capacity: 15,
+    price: 2200,
+    schedule: 'Každý čtvrtek 16:00 – 17:00',
+    location: 'Masarykovo gymnázium Příbor (Malá tělocvična)',
     benefits: ['Správné držení těla a flexibilita', 'Rytmická a taneční tvořivost', 'Posílení sebedůvěry a ladnosti']
   }
 ];
@@ -73,25 +73,51 @@ export const INSTRUCTORS: Instructor[] = [
     id: 'jiri',
     name: 'Mgr. Jiří Šplíchal',
     role: 'Zakladatel & Hlavní trenér',
-    bio: 'Absolvent FTVS UK se zaměřením na dětskou motoriku a fyziologii sportu. S více než 15 lety aktivní pedagogické a trenérské praxe se věnuje přirozenému pohybu bez předčasné specializace.',
+    bio: 'Uvědomuji si, že pro děti musí být cvičení především zábavná hra.',
     image: 'https://lh3.googleusercontent.com/d/1hCdw8DEEm4YEeYXSWk8CGwpS0uxg7CBE', // Beautiful coach photo
-    specialization: ['Pedagogika volného času', 'Dětská fyzioterapie', 'Diagnostika držení těla']
+    specialization: ['Tělesná výchova & Biologie', 'Licence: Atletika, lyžování & snowboard', 'Kondiční trénink dětí'],
+    bullets: [
+      'Učitel na Masarykově gymnáziu v Příboře',
+      'Absolvent FTK a PřF Univerzity Palackého v Olomouci (Tělesná výchova a Biologie)',
+      'Držitel atletické, lyžařské a snowboardové licence',
+      'Certifikované kurzy (kondiční trénink, balanční pomůcky, zdravotník)',
+      'Dlouholeté zkušenosti se sportovním vedením dětí',
+      'Kondiční trenér tenisového oddílu'
+    ],
+    quote: '„Každý, kdo se pohybuje, má radost ze života. To pozoruji nejen na sobě, ale také na dvou svých dětech. Téměř všechen volný čas věnuji pohybovým aktivitám, jejichž jsou oni pevnou součástí.Uvědomuji si, že pro děti musí být cvičení především zábavná hra.“',
+    youtubeLink: {
+      label: 'Ukázková hodina (YouTube)',
+      url: 'https://www.youtube.com/watch?v=gqB2ilE0dTg'
+    }
   },
   {
     id: 'daniel',
-    name: 'Daniel Reichert',
-    role: 'Instruktor gymnastiky',
-    bio: 'Bývalý aktivní gymnasta s vášní pro trenérství dětí. Miluje vytváření kreativních opičích drah a učí děti, že každý pád je jen příležitostí se znovu odrazit výš.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop', // Cool friendly instructor
-    specialization: ['Základní & akrobatická gymnastika', 'Opičí dráhy', 'Týmová motivace']
+    name: 'Mgr. Daniel Reichert',
+    role: 'Trenér & Lektor',
+    bio: 'Ukazuje se, že čas, který dětem věnujeme, se jim v životě vrátí.',
+    image: 'https://lh3.googleusercontent.com/d/0B9XZR-vdCZSnekFWZG0xbVpKbXc',
+    specialization: ['Tělesná výchova & Zeměpis', 'Licence: Atletika, lyžování & snowboard', 'In-line bruslení'],
+    bullets: [
+      'Učitel na Masarykově gymnáziu v Příboře',
+      'Absolvent Ostravské univerzity (Tělesná výchova a Zeměpis)',
+      'Držitel atletické, lyžařské, snowboardové licence a licence na in–line bruslení',
+      'Certifikované kurzy (kondiční trénink, balanční pomůcky, zdravotník)',
+      'Bohaté zkušenosti se sportovním vedením dětí různého věku'
+    ],
+    quote: '„Mé dvě dcery jsou již ve věku, kdy si sportovní aktivity vyhledávají samy. Ukazuje se, že čas, který jsme jim v dětství společně s manželkou věnovali při různých sportovních činnostech, v nich zakořenil a sport se stal přirozenou součástí jejich života.“'
   },
   {
-    id: 'klara',
-    name: 'Petr Caly',
-    role: 'Lektor tance a rytmiky',
-    bio: 'Vystudoval Univerzitu Hradec Králové, kde získal titul v oboru dějepis a základy společenských věd (ZSV). Práce s dětmi ho nesmírně naplňuje a baví, přičemž klade důraz na přátelský a individuální přístup. Svým nadšením pro sport se snaží v dětech probudit celoživotní lásku k aktivnímu pohybu.',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop', // Friendly young woman instructor
-    specialization: ['Dětský moderní tanec', 'Strečink & flexibilita', 'Hry s doprovodem hudby']
+    id: 'pomocnici',
+    name: 'Pomocní instruktoři',
+    role: 'Z řad našich studentů',
+    bio: 'Naši aktivní starší studenti, kteří skvěle doplňují náš trenérský tým.',
+    image: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=600&auto=format&fit=crop',
+    specialization: ['Tanec', 'Atletika', 'Gymnastika'],
+    bullets: [
+      'Dbají na bezpečnost dětí během tréninku',
+      'Pomáhají s organizací her a stanovišť',
+      'Předcvičují a motivují svým vlastním příkladem'
+    ]
   }
 ];
 
@@ -108,7 +134,7 @@ export const FAQS = [
   },
   {
     question: 'Co dělat, pokud dítě onemocní nebo zmešká lekci?',
-    answer: 'V případě absence nás prosím kontaktujte e-meilem nebo telefonicky před zahájením tréninku. Rádi se s vámi domluvíme na individuální možnosti náhrady v jiné skupině nebo na našem víkendovém sportovním dopoledni, pokud je volná kapacita.'
+    answer: 'Pokud je dítě nemocné, lekce bohužel propadá bez nároku na finanční kompenzaci.'
   },
   {
     question: 'Je možné se přihlásit i v průběhu rozběhnutého pololetí?',
@@ -120,7 +146,11 @@ export const FAQS = [
   },
   {
     question: 'Co dělat, pokud se dítěti trénink nebude líbit?',
-    answer: 'První lekce je u nás vždy zkušební a zcela zdarma. Pokud po prvním tréninku usoudíte, že cvičení pro dítě zatím není to pravé, přihlášku můžete bez jakýchkoliv stornopoplatků stornovat.'
+    answer: 'Pokud po prvním tréninku usoudíte, že cvičení pro dítě zatím není to pravé, přihlášku můžete bez jakýchkoliv stornopoplatků stornovat. V takovém případě hradíte pouze poměrnou část školného za tuto jednu absolvovanou lekci.'
+  },
+  {
+    question: 'Přispívají pojišťovny na sportovní kurzy?',
+    answer: 'Ano, škola vydává potvrzení pro pojišťovnu.'
   }
 ];
 

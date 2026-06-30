@@ -1,6 +1,6 @@
 import React from 'react';
 import { INSTRUCTORS } from '../constants';
-import { GraduationCap, Award, Heart, Sparkles } from 'lucide-react';
+import { GraduationCap, Award, Heart, Sparkles, Youtube } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const Instructors: React.FC = () => {
@@ -72,10 +72,48 @@ const Instructors: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Quote bio description */}
-                <p className="text-slate-600 text-sm leading-relaxed text-center mb-6 italic">
-                  "{instructor.bio}"
-                </p>
+                {/* Rich Bio / Bullets / Quotes */}
+                {instructor.bullets && instructor.bullets.length > 0 ? (
+                  <div className="mb-6 space-y-4">
+                    {instructor.quote && (
+                      <div className="bg-orange-50/60 border border-orange-100/65 rounded-2xl p-4 text-xs italic text-slate-700 leading-relaxed relative">
+                        <span className="absolute -top-3 -left-1 text-orange-200 text-4xl font-serif">“</span>
+                        <p className="relative z-10 pl-3">
+                          {instructor.quote}
+                        </p>
+                      </div>
+                    )}
+                    <ul className="text-left text-xs text-slate-600 space-y-2 border-t border-slate-100 pt-4">
+                      {instructor.bullets.map((bullet, bIdx) => (
+                        <li key={bIdx} className="flex items-start gap-2 leading-relaxed">
+                          <span className="text-orange-500 font-bold shrink-0 mt-0.5">•</span>
+                          <span>
+                            {bullet.includes('tenisového oddílu') && instructor.youtubeLink ? (
+                              <span>
+                                {bullet} -{' '}
+                                <a 
+                                  href={instructor.youtubeLink.url}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="inline-flex items-center gap-1 px-1.5 py-0.5 bg-red-50 hover:bg-red-100 text-red-600 rounded font-bold transition-all text-[11px] hover:scale-105 active:scale-95"
+                                >
+                                  <Youtube className="w-3 h-3 shrink-0" />
+                                  {instructor.youtubeLink.label}
+                                </a>
+                              </span>
+                            ) : (
+                              bullet
+                            )}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : (
+                  <p className="text-slate-600 text-sm leading-relaxed text-center mb-6 italic">
+                    "{instructor.bio}"
+                  </p>
+                )}
               </div>
 
               {/* Specializations badges list */}
