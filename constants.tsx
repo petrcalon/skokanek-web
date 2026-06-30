@@ -95,7 +95,7 @@ export const INSTRUCTORS: Instructor[] = [
     name: 'Mgr. Daniel Reichert',
     role: 'Trenér & Lektor',
     bio: 'Ukazuje se, že čas, který dětem věnujeme, se jim v životě vrátí.',
-    image: 'https://lh3.googleusercontent.com/d/0B9XZR-vdCZSnekFWZG0xbVpKbXc',
+    image: 'https://lh3.googleusercontent.com/d/0B9XZR-vdCZSnZWg1U2d3aFN6a1U',
     specialization: ['Tělesná výchova & Zeměpis', 'Licence: Atletika, lyžování & snowboard', 'In-line bruslení'],
     bullets: [
       'Učitel na Masarykově gymnáziu v Příboře',
